@@ -25,10 +25,9 @@ else:
 async def start(client,message):
 	insert(int(message.chat.id))
 	await message.reply_text(text =f"""
-	Hello {wish} {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filename to rename it__
-	""",reply_to_message_id = message.message_id ,  
+	👋 Hello {message.from_user.first_name }
+
+	Iᴀᴍ Fɪʟᴇ Rᴇɴᴀᴍᴇʀ Bᴏᴛ, Sᴇɴᴛ Aɴʏ Tᴇʟᴇɢʀᴀᴍ Dᴏᴄᴜᴍᴇɴᴛ Oʀ Vɪᴅᴇᴏ Aɴᴅ Eɴᴛᴇʀ Nᴇᴡ Fɪʟᴇɴᴀᴍᴇ To Rᴇɴᴀᴍᴇ Iᴛ__😌""",reply_to_message_id = message.message_id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("🔰 Cʜᴀɴɴᴇʟ" ,url="https://t.me/Movies_Botz") ], 
 	[InlineKeyboardButton("🤖 Cʀᴇᴀᴛᴏʀ", url="https://t.me/MufazTG") ]  ]))
@@ -43,7 +42,7 @@ async def send_doc(client,message):
        	try:
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
-       		await message.reply_text("__Yᴏᴜ Aʀᴇ Nᴏᴛ Sᴜʙsᴄʀɪʙᴇᴅ Mʏ Cʜᴀɴɴᴇʟ__👀 ",reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		await message.reply_text("__Yᴏᴜ Aʀᴇ Nᴏᴛ Sᴜʙsᴄʀɪʙᴇᴅ Mʏ Cʜᴀɴɴᴇʟ__👀 ",reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([ [ InlineKeyboardButton("Subscribe ↗️" ,url=f"https://t.me/{update_channel}") ]   ]))
        		return
        date = message.date
        _used_date = find_one(user_id)
