@@ -30,8 +30,8 @@ async def start(client,message):
 	**Document Or Video** and enter new filename to rename it__
 	""",reply_to_message_id = message.message_id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	 [[ InlineKeyboardButton("🔰 Cʜᴀɴɴᴇʟ" ,url="https://t.me/Movies_Botz") ], 
+	[InlineKeyboardButton("🤖 Cʀᴇᴀᴛᴏʀ", url="https://t.me/MufazTG") ]  ]))
 
 
 
@@ -43,13 +43,13 @@ async def send_doc(client,message):
        	try:
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
-       		await message.reply_text("**__You are not subscribed my channel__** ",reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		await message.reply_text("__Yᴏᴜ Aʀᴇ Nᴏᴛ Sᴜʙsᴄʀɪʙᴇᴅ Mʏ Cʜᴀɴɴᴇʟ__👀 ",reply_to_message_id = message.message_id, reply_markup = InlineKeyboardMarkup([ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
        		return
        date = message.date
        _used_date = find_one(user_id)
        used_date = _used_date["date"]      
        c_time = time.time()
-       LIMIT = 240
+       LIMIT = 30
        then = used_date+ LIMIT
        left = round(then - c_time)
        conversion = datetime.timedelta(seconds=left)
@@ -65,4 +65,4 @@ async def send_doc(client,message):
        	filename = file.file_name
        	filesize = humanize.naturalsize(file.file_size)
        	fileid = file.file_id
-       	await message.reply_text(f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {filesize}\n**Dc ID** :- {dcid} """,reply_to_message_id = message.message_id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),InlineKeyboardButton("✖️ Cancel",callback_data = "cancel")  ]]))
+       	await message.reply_text(f"""__ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴍᴇ ᴛᴏ ᴅᴏ ᴡɪᴛʜ ᴛʜɪs ғɪʟᴇ🧐?__\n\n**Fɪʟᴇ Nᴀᴍᴇ** :- {filename}\n**Fɪʟᴇ Siᴢᴇ** :- {filesize}\n**DC ID** :- {dcid} """,reply_to_message_id = message.message_id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rᴇɴᴀᴍᴇ",callback_data = "rename"),InlineKeyboardButton("⛔ Cᴀɴᴄᴇʟ ",callback_data = "cancel")  ]]))
