@@ -25,7 +25,7 @@ else:
 async def start(client,message):
 	insert(int(message.chat.id))
 	await message.reply_text(text =f"""
-	👋 Hello {message.from_user.first_name }
+	👋 нєℓℓσ {message.from_user.first_name }
 
 	Iᴀᴍ Fɪʟᴇ Rᴇɴᴀᴍᴇʀ Bᴏᴛ, Sᴇɴᴛ Aɴʏ Tᴇʟᴇɢʀᴀᴍ Dᴏᴄᴜᴍᴇɴᴛ Oʀ Vɪᴅᴇᴏ Aɴᴅ Eɴᴛᴇʀ Nᴇᴡ Fɪʟᴇɴᴀᴍᴇ To Rᴇɴᴀᴍᴇ Iᴛ__😌""",reply_to_message_id = message.message_id ,  
 	reply_markup=InlineKeyboardMarkup(
